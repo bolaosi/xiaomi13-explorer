@@ -1,0 +1,14 @@
+# Local browser verification and generated delivery archives
+output/
+.playwright-cli/
+*.zip
+
+# Machine-local files and credentials
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
