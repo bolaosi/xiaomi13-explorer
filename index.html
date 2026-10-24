@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0e12">
-  <meta name="description" content="用交互式 3D 拆解探索 Osmo Action 4。原生 Three.js 程序化模型、部件参数与自由视角。">
-  <title>Osmo Action 4 · 精密，由内而外</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312171d'/%3E%3Ccircle cx='38' cy='30' r='17' fill='none' stroke='%2382d5ed' stroke-width='5'/%3E%3Cpath d='M10 19h10v22H10z' fill='%23ec9b46'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="用交互式 3D 拆解探索 Xiaomi 13。原生 Three.js 程序化模型、部件参数与自由视角。">
+  <title>Xiaomi 13 · 精密，由内而外</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e12'/%3E%3Crect x='17' y='6' width='30' height='52' rx='6' fill='%23b7cdbd'/%3E%3Crect x='21' y='10' width='15' height='16' rx='3' fill='%2312171d'/%3E%3Ccircle cx='25' cy='14' r='2' fill='%2382c9b7'/%3E%3Ccircle cx='32' cy='14' r='2' fill='%2382c9b7'/%3E%3Ccircle cx='25' cy='21' r='2' fill='%2382c9b7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css?v=xiaomi13">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./" aria-label="Osmo Action 4 首页"><span class="dji">dji</span><span class="brand-separator"></span><span>OSMO ACTION <b>4</b></span></a>
+    <a class="brand" href="./" aria-label="Xiaomi 13 首页"><span class="mi">mi</span><span class="brand-separator"></span><span>XIAOMI <b>13</b></span></a>
     <nav aria-label="主导航"><button class="nav-link active" id="explore-nav">拆解探索 <span>01</span></button><button class="nav-link" data-dialog="specs-dialog">技术规格 <span>02</span></button><button class="nav-link" data-dialog="about-dialog">关于模型 <span>03</span></button></nav>
     <span class="live-indicator"><i></i> INTERACTIVE EXPERIENCE</span>
   </header>
 
   <main class="workspace">
-    <section class="explorer" aria-label="Action 4 交互式三维拆解">
-      <div class="intro"><div class="eyebrow"><span></span> ENGINEERED FOR ADVENTURE</div><h1>精密，<br>由内而外<span>。</span></h1><p>探索方寸之间的无限可能。<br>旋转、拆解，发现每一处精心设计。</p></div>
-      <div class="scene-meta"><span class="tiny-cross">+</span> OSMO ACTION 4 <span class="mono">/ 3D EXPLORER</span></div>
+    <section class="explorer" aria-label="小米 13 交互式三维拆解">
+      <div class="intro"><div class="eyebrow"><span></span> DESIGNED AROUND YOU</div><h1>精密，<br>由内而外<span>。</span></h1><p>探索方寸之间的无限可能。<br>旋转、拆解，发现每一处精心设计。</p></div>
+      <div class="scene-meta"><span class="tiny-cross">+</span> XIAOMI 13 <span class="mono">/ 3D EXPLORER</span></div>
       <div class="stage" id="stage">
-        <canvas id="scene" tabindex="0" aria-label="相机三维模型。拖动旋转，滚轮缩放，点击部件拆解。也可使用右侧部件清单。"></canvas>
+        <canvas id="scene" tabindex="0" aria-label="手机三维模型。拖动旋转，滚轮缩放，点击部件拆解。也可使用右侧部件清单。"></canvas>
         <div id="labels" class="labels"></div>
         <div class="loader" id="loader"><span></span><p>正在构建精密世界</p><small>GENERATING GEOMETRY</small></div>
         <div class="stage-coordinate mono">Y ↑<br><span>Z ↙ &nbsp; X →</span></div>
@@ -35,7 +35,7 @@
     </section>
 
     <aside class="sidebar" aria-label="部件和参数">
-      <div class="product-heading"><span class="eyebrow">BEYOND THE SURFACE</span><h2>Osmo Action <span>4</span></h2><p>旗舰画质，尽释潜能。</p><div class="product-stats"><div><strong>1/1.3″</strong><span>CMOS 传感器</span></div><div><strong>4K<span>/120</span></strong><span>超高清慢动作</span></div><div><strong>18<span>m</span></strong><span>裸机防水</span></div></div></div>
+      <div class="product-heading"><span class="eyebrow">BEYOND THE SURFACE</span><h2>Xiaomi <span>13</span></h2><p>小尺寸，旗舰的每一面。</p><div class="product-stats"><div><strong>6.36<span>″</span></strong><span>120 Hz AMOLED</span></div><div><strong>50<span>MP</span></strong><span>徕卡主摄</span></div><div><strong>67<span>W</span></strong><span>有线快充</span></div></div></div>
       <div class="parts-heading"><h3>部件清单 <span>COMPONENTS</span></h3><span class="count-badge">10</span></div>
       <div id="parts-list" class="parts-list" role="group" aria-label="选择并拆解部件"></div>
       <section id="part-detail" class="part-detail" aria-live="polite"></section>
@@ -45,9 +45,9 @@
   <footer><span><i></i> ALL GEOMETRY. ALL CODE.</span><span>程序化三维模型 · 内部结构为原理示意 <button data-dialog="about-dialog">了解模型 →</button></span><span class="mono">DESIGNED TO EXPLORE <b>↗</b></span></footer>
   <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
 
-  <dialog id="specs-dialog"><div class="dialog-heading"><span class="eyebrow">TECHNICAL SPECIFICATIONS</span><button class="close-dialog" aria-label="关闭">×</button></div><h2>小机身，大有可为。</h2><p class="dialog-intro">Osmo Action 4 官方公开参数</p><dl class="spec-table"><div><dt>外形尺寸</dt><dd>70.5 × 44.2 × 32.8 mm</dd></div><div><dt>机身重量</dt><dd>145 g</dd></div><div><dt>影像传感器</dt><dd>1/1.3 英寸 CMOS</dd></div><div><dt>镜头</dt><dd>155° · f/2.8 · 0.4 m 至 ∞</dd></div><div><dt>视频</dt><dd>最高 4K / 120 fps（16:9）</dd></div><div><dt>前 / 后触摸屏</dt><dd>1.4 英寸 / 2.25 英寸</dd></div><div><dt>电池</dt><dd>1770 mAh · 3.85 V · 6.8 Wh</dd></div><div><dt>防水深度</dt><dd>裸机 18 m / 防水壳 60 m*</dd></div><div><dt>存储</dt><dd>microSD，最高 512 GB</dd></div></dl><p class="footnote">*需正确关闭电池仓、USB-C 仓盖并拧紧镜头保护盖。实际使用条件及完整说明请参阅官方资料。</p><a href="https://www.dji.com/cn/osmo-action-4/specs" target="_blank" rel="noopener noreferrer" class="source-link">查看 DJI 官方参数 ↗</a></dialog>
-  <dialog id="about-dialog"><div class="dialog-heading"><span class="eyebrow">ABOUT THIS EXPLORER</span><button class="close-dialog" aria-label="关闭">×</button></div><h2>从一行代码，到精密世界。</h2><p>模型全部由 Three.js 几何体、程序化材质和 Canvas 纹理生成，不加载外部 3D 模型、图片或环境贴图。页面运行仅使用 Three.js、HTML、CSS 和 JavaScript。</p><p>外观参照 DJI Osmo Action 4 的公开产品资料与尺寸比例，镜头、双屏、接口和快拆底座均可独立探索。芯片、主板布线、内部安装位置与拆解方向为教学展示而作的近似示意，未经实物测绘，不能作为维修、装配或工程尺寸依据。</p><p>本页面为独立交互设计演示，非 DJI 官方产品。DJI、Osmo 为其各自所有者的商标。</p><a class="source-link" href="https://www.dji.com/cn/osmo-action-4" target="_blank" rel="noopener noreferrer">产品资料来源：DJI 官方网站 ↗</a></dialog>
+  <dialog id="specs-dialog"><div class="dialog-heading"><span class="eyebrow">TECHNICAL SPECIFICATIONS</span><button class="close-dialog" aria-label="关闭">×</button></div><h2>小尺寸，全能旗舰。</h2><p class="dialog-intro">小米 13 标准版 · 玻璃机身公开参数</p><dl class="spec-table"><div><dt>外形尺寸</dt><dd>152.8 × 71.5 × 7.98 mm</dd></div><div><dt>机身重量</dt><dd>189 g（玻璃版）</dd></div><div><dt>移动平台</dt><dd>第二代骁龙 8 · 4 nm</dd></div><div><dt>显示屏</dt><dd>6.36″ AMOLED · 最高 120 Hz</dd></div><div><dt>屏幕分辨率</dt><dd>2400 × 1080</dd></div><div><dt>后置三摄</dt><dd>50 MP 主摄 / 12 MP 超广角 / 10 MP 长焦</dd></div><div><dt>前置摄像头</dt><dd>32 MP</dd></div><div><dt>电池与充电</dt><dd>4500 mAh（典型值）· 67W 有线 / 50W 无线</dd></div><div><dt>音频与触感</dt><dd>双扬声器 · X 轴线性马达</dd></div><div><dt>防尘防水</dt><dd>IP68*</dd></div></dl><p class="footnote">*防尘防水性能基于特定实验室条件，不等于可日常浸水使用；损伤、磨损和拆卸可能影响密封性。玻璃版与其他材质版本的重量、厚度可能不同。充电、镜头像素等条件与完整说明以官方资料为准。</p><a href="https://www.mi.com/global/product/xiaomi-13/specs/" target="_blank" rel="noopener noreferrer" class="source-link">查看小米官方参数 ↗</a></dialog>
+  <dialog id="about-dialog"><div class="dialog-heading"><span class="eyebrow">ABOUT THIS EXPLORER</span><button class="close-dialog" aria-label="关闭">×</button></div><h2>从一行代码，到精密世界。</h2><p>模型全部由 Three.js 几何体、程序化材质和 Canvas 纹理生成，不加载外部 3D 模型、图片或环境贴图。页面运行仅使用 Three.js、HTML、CSS 和 JavaScript。</p><p>当前展示小米 13 标准版绿色玻璃机身，参照小米官方外观与公开参数构建直边中框、左上方方形三摄、窄边直屏和居中打孔。芯片封装、VC 覆盖、NFC 与无线线圈、排线和内部安装位置为教学近似示意；没有实物测绘或官方 CAD，不能用于维修、装配或尺寸核验。锁屏为独立绘制的示意画面。</p><p>本页面为独立交互设计演示，非小米官方产品。Xiaomi、小米、Leica、Snapdragon 等商标归各自所有者所有。</p><a class="source-link" href="https://www.mi.com/global/product/xiaomi-13/" target="_blank" rel="noopener noreferrer">产品资料来源：小米官方网站 ↗</a></dialog>
   <dialog id="help-dialog"><div class="dialog-heading"><span class="eyebrow">QUICK START</span><button class="close-dialog" aria-label="关闭">×</button></div><h2>用你的方式，探索。</h2><div class="help-grid"><p><b>01 / 自由观察</b>鼠标左键或单指拖动旋转，滚轮或双指缩放。右键拖动可平移。</p><p><b>02 / 拆开细节</b>点击模型或右侧清单，将部件分离；再次点击可装回。蓝色代表当前选择。</p><p><b>03 / 完整拆解</b>拖动拆解滑块连续展开全部部件，或开启自动演示逐层探索。</p><p><b>04 / 快捷操作</b><kbd>E</kbd> 拆解 / 组装　<kbd>R</kbd> 全部复位　<kbd>空格</kbd> 演示 / 暂停</p></div><button class="primary-button close-dialog">开始探索 ↗</button></dialog>
   <noscript>此交互式 3D 页面需要启用 JavaScript。</noscript>
-  <script type="module">import('./app.js').catch(error=>{console.error('页面模块加载失败',error);document.getElementById('loader').innerHTML='<div class="webgl-error"><p>页面资源未能完整加载。</p><small>请通过本地 HTTP 服务访问，然后重新加载。</small><p><button class="primary-button" id="retry-load">重新加载 ↻</button></p></div>';document.getElementById('retry-load').addEventListener('click',()=>location.reload());});</script>
+  <script type="module">import('./app.js?v=xiaomi13').catch(error=>{console.error('页面模块加载失败',error);document.getElementById('loader').innerHTML='<div class="webgl-error"><p>页面资源未能完整加载。</p><small>请通过本地 HTTP 服务访问，然后重新加载。</small><p><button class="primary-button" id="retry-load">重新加载 ↻</button></p></div>';document.getElementById('retry-load').addEventListener('click',()=>location.reload());});</script>
 </body></html>
