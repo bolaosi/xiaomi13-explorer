@@ -2,6 +2,10 @@
 
 小米 13 标准版的程序化 3D 拆解探索页。仅使用 Three.js / HTML / CSS / JavaScript；模型、屏幕山景、标识、金属反射和线圈全部由代码生成，无外部模型、图片或运行时外网依赖。无需 npm install 或构建。
 
+## 在线体验
+
+直接打开：[小米 13 交互式拆解](https://bolaosi.github.io/xiaomi13-explorer/)。无需下载或登录，建议使用支持 WebGL 2 的现代浏览器。
+
 ## 本地打开
 
 安装 Python 3 后，Windows 双击 `Start-preview.cmd`，自动打开本地网页。保留服务窗口，按 Ctrl+C 停止；端口被其他程序占用时自动选择可用端口。也可在工程目录运行：
@@ -52,4 +56,4 @@ python -m http.server 8766 --bind 127.0.0.1
 
 支持 import map、ES 模块和 WebGL 2 的现代浏览器。离开视口或切后台时跳过渲染；移动端降低像素比；支持减少动态偏好。只读诊断入口：`window.explorer.getState()`、`window.explorer.projectPart(id)`。
 
-当前小米 13 版本通过 68 项 Chromium 行为检查，包括全部部件拆装、真实模型点击、连续滑块、动画收敛、正反视角、鼠标拖动/滚轮、CDP 单指/双指以及 320–1920px 七种屏宽。另通过全屏进入/退出、模型说明与完整自动演示结束 4 项补充检查。无未捕获 JavaScript 错误或运行时站外请求。触摸检查使用 Chromium CDP，尚未实测真实手机 GPU 与其他浏览器。源码托管于现有仓库，未启用 GitHub Pages；原模型保留在 Git 历史提交中。
+当前小米 13 版本通过 68 项 Chromium 行为检查，包括全部部件拆装、真实模型点击、连续滑块、动画收敛、正反视角、鼠标拖动/滚轮、CDP 单指/双指以及 320–1920px 七种屏宽。另通过全屏进入/退出、模型说明与完整自动演示结束 4 项补充检查。无未捕获 JavaScript 错误或运行时站外请求。触摸检查使用 Chromium CDP，尚未实测真实手机 GPU 与其他浏览器。源码与 GitHub Pages 页面均公开，Pages 从 main 分支根目录部署；原模型保留在 Git 历史提交中。
